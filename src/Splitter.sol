@@ -2,8 +2,10 @@
 pragma solidity >=0.8.0;
 
 import "./test/utils/Console.sol";
+import "./TestERC20.sol";
 
 contract Splitter {
+    TestERC20 public paymentToken;
     mapping(address => bool) public isRecipient;
     uint256 public numberOfRecipients;
 
@@ -12,7 +14,8 @@ contract Splitter {
         _;
     }
 
-    constructor(address[] memory initialRecipients) {
+    constructor(address[] memory initialRecipients, TestERC20 _paymentToken) {
+        paymentToken = _paymentToken;
         // TODO
         console.log("Fill this function in");
         console.log(initialRecipients);
