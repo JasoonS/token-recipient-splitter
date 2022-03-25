@@ -3,7 +3,7 @@ pragma solidity >=0.8.0;
 
 import "./test/utils/Console.sol";
 
-contract Contract {
+contract Splitter {
     mapping(address => bool) public isRecipient;
     uint256 public numberOfRecipients;
 

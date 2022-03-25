@@ -6,7 +6,7 @@ import {Utilities} from "./utils/Utilities.sol";
 import {console} from "./utils/Console.sol";
 import {Vm} from "forge-std/Vm.sol";
 
-contract ContractTest is DSTest {
+contract SplitterTest is DSTest {
     Vm internal immutable vm = Vm(HEVM_ADDRESS);
 
     Utilities internal utils;
@@ -17,7 +17,7 @@ contract ContractTest is DSTest {
         users = utils.createUsers(5);
     }
 
-    function testExample() public {
+    function testExampleThatDoesNothing() public {
         address payable alice = users[0];
         // labels alice's address in call traces as "Alice [<address>]"
         vm.label(alice, "Alice");
