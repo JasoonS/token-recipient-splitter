@@ -14,7 +14,7 @@ contract SplitterTest is DSTest {
 
     function setUp() public {
         utils = new Utilities();
-        users = utils.createUsers(5);
+        users = utils.createUsers(10);
     }
 
     function testExampleThatDoesNothing() public {
